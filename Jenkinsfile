@@ -12,6 +12,9 @@ pipeline {
     stage("test"){
       steps{
         echo "build test"
+        nodejs('nodejs'){
+        sh 'node app/server.js'  
+        }
       }
     }
     stage("deployment"){
