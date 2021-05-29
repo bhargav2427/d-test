@@ -16,3 +16,7 @@ services:
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+  try:
+    image: bhargav2427/try:6.0
+    ports:
+      - 3000:3000
