@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongo = require("mongodb");
 var MongoClient = require("mongodb").MongoClient;
+// var jimp = require('jimp');
 
 var url = "mongodb://admin:password@localhost:27017/";
 
