@@ -26,7 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-#     - run: npm build
     - uses: mr-smithers-excellent/docker-build-push@v5
     - name: Build & push Docker image
       with:
