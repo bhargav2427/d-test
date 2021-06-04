@@ -27,12 +27,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     
-#     - uses: mr-smithers-excellent/docker-build-push@v5
-#     - name: Build & push Docker image
-#       with:
-#         image: bhargav2427/try
+    - uses: actions/checkout@v2
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
+      with:
+        image: repo/image
 #         tags: v1, latest
-#         registry: docker.io
-# #         dockerfile: Dockerfile.ci
-#         username: ${{ secrets.DOCKER_USERNAME }}
-#         password: ${{ secrets.DOCKER_PASSWORD }}
+        registry: docker.io
+#         dockerfile: Dockerfile.ci
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
