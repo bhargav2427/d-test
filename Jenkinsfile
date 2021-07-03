@@ -24,6 +24,14 @@ pipeline {
     }
   }
   post {
-    echo 'in post'
+    always{
+      echo "i will execute always"
+    }
+    failure {
+      echo "get failed"
+    }
+    sucess {
+      echo "get success"
+    }
   }
 }
