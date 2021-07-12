@@ -13,7 +13,7 @@ pipeline {
       steps{
         echo "build test"
         nodejs('nodejs'){
-//         sh 'node app/server.js'  
+        sh 'node app/server.js'  
         }
       }
     }
